@@ -44,15 +44,6 @@ const Hero = () => {
   return (
     <section className="relative bg-gradient-to-br from-orange-50 to-amber-100 
       py-8 md:py-18 lg:py-24 flex items-center overflow-hidden">
-      {/* Mobile Menu Toggle */}
-      <div className="absolute top-4 right-4 md:hidden z-50">
-        <button 
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="p-2 bg-white/20 backdrop-blur-sm rounded-full"
-        >
-          <MenuIcon className="w-6 h-6 text-orange-800" />
-        </button>
-      </div>
 
       {/* Decorative Shapes */}
       <div className="absolute inset-0 pointer-events-none">
@@ -134,12 +125,12 @@ const Hero = () => {
           </div>
 
           {/* Illustration Right */}
-          <div className="hidden md:flex justify-center items-center relative">
+          <div className="flex justify-center items-center relative">
             <div className="absolute w-72 md:w-[28rem] h-72 md:h-[28rem] 
               bg-white/20 backdrop-blur-md rounded-full animate-blob"></div>
             
             <div className="relative z-10 w-64 md:w-[450px] h-64 md:h-[450px] 
-              rounded-full overflow-hidden shadow-2xl 
+              rounded-xl overflow-hidden shadow-2xl 
               transform transition-transform hover:scale-105">
               <img 
                 src="/images/webinar.jpg" 
@@ -152,12 +143,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay (Optional) */}
-      {mobileMenuOpen && (
-        <div className="fixed inset-0 bg-white/90 z-40 md:hidden">
-          {/* Mobile Menu Content */}
-        </div>
-      )}
     </section>
   );
 };
